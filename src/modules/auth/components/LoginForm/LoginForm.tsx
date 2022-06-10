@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { ILoginParams, ILoginValidation } from "../../../models/auth";
-import { validateLogin, validLogin } from "../../../models/utils";
+import { ILoginParams, ILoginValidation } from "../../../../models/auth";
+import { validateLogin, validLogin } from "../../../../models/utils";
+import "./LoginForm.css";
 
 interface Props {
     isLoading: boolean;
@@ -32,7 +33,7 @@ function LoginForm(props: Props) {
         <div>
             <form
                 className="row g-3 needs-validation"
-                style={{ maxWidth: "560px", width: "100%" }}
+                id="login-form"
                 noValidate
                 onSubmit={(e) => {
                     e.preventDefault();
@@ -98,12 +99,7 @@ function LoginForm(props: Props) {
                         <button
                             className="btn btn-primary"
                             type="submit"
-                            style={{
-                                minWidth: "160px",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                            }}
+                            id="button-submit"
                             disabled={isLoading}
                         >
                             {isLoading && (

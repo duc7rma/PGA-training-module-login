@@ -1,13 +1,12 @@
 import React from "react";
-import LoginPage from "./components/Login/LoginPage/LoginPage";
+import LoginPage from "./modules/auth/pages/LoginPage/LoginPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Contact from "./pages/Contact";
+import Home from "./modules/home/Home/index";
+import Contact from "./modules/home/Contact/index";
 
 function App() {
     return (
         <div className="App">
-            {/* <LoginPage /> */}
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<LoginPage />} />
